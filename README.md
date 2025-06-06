@@ -1,6 +1,10 @@
 # -Ecommerce_SQL_Database
 SQL for Data Analysis 
 
+# SQL Script:  
+ - <a href="https://github.com/SOUJIT-BAKSHI/-Ecommerce_SQL_Database/blob/main/Ecommerce_DB.sql">E-commerce_analysis.sql
+# SQL_Outputs:
+ - <a href="https://github.com/SOUJIT-BAKSHI/-Ecommerce_SQL_Database/blob/main/E-commerce_sql_output.pdf">Screenshots_Folder
 Task Objective:
 To utilize SQL queries to extract and analyze data from an e-commerce database to gain insights, optimize queries, and apply data manipulation techniques.
 
