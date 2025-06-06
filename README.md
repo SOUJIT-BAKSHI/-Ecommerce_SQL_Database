@@ -4,7 +4,7 @@ SQL for Data Analysis
 # SQL Script:  
  - <a href="https://github.com/SOUJIT-BAKSHI/-Ecommerce_SQL_Database/blob/main/Ecommerce_DB.sql">E-commerce_analysis.sql
 # SQL_Outputs:
- - <a href="https://github.com/SOUJIT-BAKSHI/-Ecommerce_SQL_Database/blob/main/E-commerce_sql_output.pdf">Screenshots_Folder
+ - <a href="https://github.com/SOUJIT-BAKSHI/-Ecommerce_SQL_Database/blob/main/Ecommerce_sql_Output.pdf">Screenshots_Folder
 
 🔹 Project Title:
 SQL for Data Analysis using an Ecommerce Database
