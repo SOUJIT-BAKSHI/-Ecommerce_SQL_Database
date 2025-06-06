@@ -1,4 +1,4 @@
-# -Ecommerce_SQL_Database
+# Ecommerce_SQL_Database
 SQL for Data Analysis 
 
 # SQL Script:  
