@@ -6,114 +6,56 @@ SQL for Data Analysis
 # SQL_Outputs:
  - <a href="https://github.com/SOUJIT-BAKSHI/-Ecommerce_SQL_Database/blob/main/E-commerce_sql_output.pdf">Screenshots_Folder
 
+🔹 Project Title:
+SQL for Data Analysis using an Ecommerce Database
 
 Task Objective:
 To utilize SQL queries to extract and analyze data from an e-commerce database to gain insights, optimize queries, and apply data manipulation techniques.
 
 Tools Used:
-
-
-
 Interface: MySQL Workbench
 
-Dataset:
-Custom-created Ecommerce_SQL_Database consisting of the following tables:
+Step-by-Step Tasks:
+Create a Sample Database
+Build a small ecommerce database with tables like:
 
-customers (customer_id, name, email, phone, address)
+Customers
 
-products (product_id, name, category, price, stock_quantity)
+Products
 
-orders (order_id, customer_id, order_date, total_amount)
+Orders
 
-order_items (order_item_id, order_id, product_id, quantity, price)
+Order Items
 
-payments (payment_id, order_id, payment_date, payment_method, amount)
+Payments
 
-SQL Queries & Descriptions:
+Fill the Tables with Sample Data
+Add around 20 records in each table to make the data look real.
 
-SELECT with WHERE, ORDER BY
+Perform Data Analysis Using SQL
+Run different types of SQL queries to answer questions like:
 
-SELECT * FROM products WHERE price > 500 ORDER BY price DESC;
+*Which products are expensive?
+*Who are the top customers?
+*What is the total sales for each product category?
+*How many orders did each customer place?
 
-Description: Retrieves products priced over 500 sorted from highest to lowest.
+Use Key SQL Features
+While writing queries, make sure you use:
 
-GROUP BY with COUNT
+Filtering and sorting (like search and order)
 
-SELECT customer_id, COUNT(*) AS total_orders FROM orders GROUP BY customer_id;
+Grouping (to summarize)
 
-Description: Shows number of orders placed by each customer.
+Joining multiple tables
 
-INNER JOIN
+Views (like saved queries)
 
-SELECT o.order_id, c.name, o.total_amount FROM orders o INNER JOIN customers c ON o.customer_id = c.customer_id;
+Indexes (to make queries faster)
 
-Description: Lists order details along with customer names.
+Take Screenshots
+After each important query, take a screenshot of your SQL code and result
 
-LEFT JOIN
-
-SELECT c.customer_id, c.name, o.order_id FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id;
-
-Description: Lists all customers and their orders (if any).
-
-Subquery
-
-SELECT * FROM customers WHERE customer_id IN (
-  SELECT customer_id FROM orders GROUP BY customer_id HAVING SUM(total_amount) > 1000
-);
-
-Description: Retrieves customers whose total spending exceeds 1000.
-
-Aggregate Function: AVG
-
-SELECT AVG(total_amount) AS avg_order FROM orders;
-
-Description: Calculates average order amount.
-
-GROUP BY with SUM
-
-SELECT p.category, SUM(oi.price * oi.quantity) AS total_revenue
-FROM order_items oi JOIN products p ON oi.product_id = p.product_id
-GROUP BY p.category;
-
-Description: Calculates total revenue by product category.
-
-Create View
-
-CREATE VIEW sales_by_customer AS
-SELECT c.customer_id, c.name, SUM(o.total_amount) AS total_spent
-FROM customers c JOIN orders o ON c.customer_id = o.customer_id
-GROUP BY c.customer_id, c.name;
-
-Description: Creates a reusable view for total sales by customer.
-
-Indexing for Optimization
-
-CREATE INDEX idx_order_date ON orders(order_date);
-CREATE INDEX idx_product_category ON products(category);
-
-Description: Adds indexes to improve query performance on frequently filtered columns.
-
-Screenshots:
-
-Queries with their outputs were executed in MySQL Workbench.
-
-Screenshots saved in folder: SQL_Outputs
-
-Outcome:
-
-Learned to structure and analyze relational data using SQL.
-
-Applied best practices in joins, aggregations, and indexing.
-
-Created optimized, readable, and insightful queries for real-world e-commerce datasets.
-
-Deliverables:
-
-SQL Script: ecommerce_analysis.sql
-
-Screenshots Folder: SQL_Outputs
-
-Report Document: This file
 
 Prepared by:
 [Soujit Bakshi]
